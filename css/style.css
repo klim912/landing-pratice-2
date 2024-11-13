@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+.header {
+  display: flex;
+  background-color: #f5f7ff;
+  box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
+}
+.header__wrapper {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  background: #f5f7ff;
+}
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  margin-right: 56px;
+}
+.header__title {
+  color: rgb(39, 38, 38);
+  font-family: Odibee Sans;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 5%;
+  text-align: left;
+}
+.header__navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  color: #272323;
+  margin-right: 67px;
+}
+.header__navbar a {
+  text-decoration: none;
+  color: rgb(39, 35, 35);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 2%;
+  text-align: center;
+}
+.header__navbar a:hover {
+  color: #4238af;
+}
+.header__search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 26px;
+}
+.header__search input {
+  border: none;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  width: 307px;
+  height: 35px;
+  color: rgb(165, 165, 165);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 62px;
+  letter-spacing: 2%;
+  padding-left: 19px;
+}
+.header__search-button button {
+  position: relative;
+  top: 4px;
+  bottom: 3px;
+  right: 35px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(192, 194, 248, 0.22);
+  border: none;
+  cursor: pointer;
+}
+.header__login {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 62px;
+  letter-spacing: 2%;
+  text-align: left;
+}
+.header__login a {
+  text-decoration: none;
+  color: #272323;
+}
+.header__login a:hover {
+  color: #4238af;
+}
+
+.discover {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
+  margin-top: 0;
+}
+.discover__wrapper {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: rgb(245, 247, 255);
+}
+.discover__sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 543px;
+  margin-top: 125px;
+}
+.discover__title {
+  font-family: Prompt;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 55px;
+  letter-spacing: 7%;
+  text-align: left;
+  color: #353434;
+  margin-bottom: 18px;
+}
+.discover__title span {
+  color: #FF5C00;
+}
+.discover__subtitle {
+  color: rgb(168, 168, 168);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 2%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.discover__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 34px;
+}
+.discover__buttons .discover__button-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  background: rgb(84, 76, 172);
+  width: 150px;
+  height: 44px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 62px;
+  letter-spacing: 2%;
+  cursor: pointer;
+}
+.discover__buttons .discover__button-right {
+  width: 153px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 21px;
+  background-color: #f5f7ff;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2%;
+  white-space: nowrap;
+  border: none;
+}
+.discover__img {
+  margin-top: 61px;
+}
+
+.roulette {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.roulette__wrapper {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+}
