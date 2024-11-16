@@ -1,210 +1,259 @@
 @import "_reset";
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.header {
-    display: flex;
-    background-color: #f5f7ff;
-    box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
-    &__wrapper {
-        max-width: 1440px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin: 0 auto;
-        background: #f5f7ff;
-    }
-
-    &__logo {
-        display: flex;
-        flex-direction: row;
-        gap: 4px;
-        align-items: center;
-        margin-right: 56px;
-    }
-
-    &__title {
-        color: rgb(39, 38, 38);
-        font-family: Odibee Sans;
-        font-size: 29px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 5%;
-        text-align: left;
-    }
-
-    &__navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 30px;
-        color: #272323;
-        margin-right: 67px;
-        a {
-            text-decoration: none;
-            color: rgb(39, 35, 35);
-            font-family: Open Sans;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 2%;
-            text-align: center;
-            &:hover {
-                color: #4238af;
-            }
-        }
-    }
-
-    &__search {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-right: 26px;
-        input {
-            border: none;
-            border-radius: 50px;
-            background: rgb(255, 255, 255);
-            width: 307px;
-            height: 35px;
-            color: rgb(165, 165, 165);
-            font-family: Open Sans;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 62px;
-            letter-spacing: 2%;
-            padding-left: 19px;
-        }
-    }
-
-    &__search-button {
-        button {
-            position: relative;
-            top: 4px;
-            bottom: 3px;
-            right: 35px;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: rgba(192, 194, 248, 0.22);
-            border: none;
-            cursor: pointer;
-        }
-    }
-
-    &__login {
-        font-family: Open Sans;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 62px;
-        letter-spacing: 2%;
-        text-align: left;
-        a {
-            text-decoration: none;
-            color: #272323;
-            &:hover {
-                color: #4238af;
-            }
-        }
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "_variables";
+@import "_mixins";
+@import "_header";
 
 .discover {
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
+    @include flex-params(flex,center ,none ,none );
+    box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);;
     margin-top: 0;
     &__wrapper {
         width: 1440px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        background: rgb(245, 247, 255);
+        @include flex-params(flex,center ,row ,none );
+        background: $lightgreen;
     }
 
     &__sidebar {
-        display: flex;
-        flex-direction: column;
-        width: 543px;
+        @include flex-params(flex,none ,column ,none );
+        width: 545px;
         margin-top: 125px;
     }
 
     &__title {
-        font-family: Prompt;
-        font-size: 45px;
-        font-weight: 400;
-        line-height: 55px;
-        letter-spacing: 7%;
-        text-align: left;
-        color:#353434;
+        @include text-params(Prompt,45px ,400 ,55px ,7% ,left );
+        color:$black-text;
         margin-bottom: 18px;
         span{
-            color: #FF5C00;
+            color: $num3-orange;
         }
     }
 
     &__subtitle {
-        color: rgb(168, 168, 168);
-        font-family: Open Sans;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 2%;
-        text-align: left;
+        color: $grey;
+        @include text-params(Open Sans,14px ,400 ,24px ,2% ,left );
         margin-bottom: 30px;
     }
 
     &__buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 34px;
+        @include flex-params(flex,none ,row ,none );
+        gap: 35px;
         .discover__button-left{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-params(flex,center ,none ,center );
             border-radius: 6px;
-            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
-            background: rgb(84, 76, 172);
-            width: 150px;
-            height: 44px;
+            box-shadow: 0px 4px 12px 0px rgba(49, 49, 49, 0.05);;
+            background: $blue;
+            @include size-of-object(150px,45px );
             border: none;
-            color: rgb(255, 255, 255);
-            font-family: Open Sans;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 62px;
-            letter-spacing: 2%;
+            color: $full-white;
+            @include text-params(Open Sans,16px ,400 ,62px ,2% ,none );
             cursor: pointer;
         }
         .discover__button-right{
-            width: 153px;
-            height: 44px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 21px;
-            background-color: #f5f7ff;
+            @include size-of-object(155px,45px );
+            @include flex-params(flex,none ,row ,center );
+            gap: 20px;
+            background-color: $lightgreen;
             cursor: pointer;
-            color: rgb(0, 0, 0);
-            font-family: Open Sans;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 2%;
+            color: $full-black;
+            @include text-params(Open Sans,16px ,400 ,none ,2% ,none );
             white-space: nowrap;
             border: none;
         }
     }
 
     &__img {
-        margin-top: 61px;
+        margin-top: 60px;
     }
 }
 
 .roulette{
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
+    @include flex-params(flex,center ,none ,none );
+    margin-top: 35px;
+    margin-bottom: 65px;
     &__wrapper{
         width: 1440px;
-        display: flex;
-        justify-content: center;
+        @include flex-params(flex,center ,none ,none );
     }
 }
+
+.find {
+    @include flex-params(flex,center ,none ,none );
+    &__wrapper {
+        width: 1440px;
+        @include flex-params(flex,center ,none ,none );
+    }
+
+    &__content-wrapper {
+        @include flex-params(flex,none ,column ,none );
+        margin-right: 40px;
+    }
+
+    &__header {
+        @include text-params(Oswald,12px ,400 ,50px ,5% ,left );
+        color: $yellow;
+        margin-bottom: 20px;
+    }
+
+    &__sidebar {
+        @include flex-params(flex,none ,column ,none );
+        .find__title{
+            color: $black-text;
+            @include text-params(Oswald,40px ,400 ,50px ,5% ,left );
+        }
+    }
+
+    &__card {
+        @include flex-params(flex,space-between ,row ,center );
+        @include size-of-object(435px,60px);
+        border-radius: 8px;
+        color: $lightgreen;
+        .find__justify{
+            @include flex-params(flex,none ,row ,center );
+        }
+
+    }
+
+		&__card-number {
+            @include flex-params(flex,center ,none ,center );
+            @include size-of-object(30px,30px);
+            border-radius: 6px;
+            margin-right: 15px;
+            @include text-params(Open Sans,16px ,600 bold,none ,none ,none );
+            
+			&_first {
+                background-color: $bgc1;
+                color: $num1-purple;
+			}
+
+            &_second {
+                background-color: $bgc2;
+                color: $num2-blue;
+			}
+
+			&_third {
+                background-color: $bgc3;
+                color: $num3-orange;
+			}
+		}
+
+    &__subtitle {
+        @include text-params(Open Sans,16px ,600 ,50px ,2% ,left );
+        color: $black-text;
+    }
+
+    &__icon {
+        text-align: end;
+        margin-right: 24px;
+    }
+
+    &__card-active {
+       @include size-of-object(435px,135px);
+        border-radius: 8px;
+        color: $lightgreen;
+    }
+
+    &__card-wrapper {
+        @include flex-params(flex,space-between ,row ,center );
+        .find__justify{
+            @include flex-params(flex,none ,row ,center );
+        }
+    }
+
+    &__content {
+        @include text-params(Open Sans,12px ,400 ,22px ,2% ,none );
+        color: $grey;
+    }
+
+    &__video {
+        img{
+        @include size-of-object(635px,435px );
+        border-radius: 20px;
+        }
+        .find__player{
+            position: relative;
+            @include size-of-object(77px,77px );
+            top: -185px;
+            left:   -370px;
+            cursor: pointer;
+        }
+    }
+}
+
+.choose {
+    @include flex-params(flex,center ,none ,none );
+    &__wrapper {
+        width: 1440px;
+        margin: 0 auto;
+        @include flex-params(flex,center ,column ,none );
+    }
+
+    &__header {
+        @include flex-params(flex,none ,column ,none );
+        margin-bottom: 45px;
+        margin-top: 120px;
+    }
+
+    &__title {
+        @include text-params(Oswald,40px ,400 ,50px ,5% ,center );
+        color: $black-text;
+    }
+
+    &__subtitle {
+        @include text-params(Open Sans,14px ,400 ,24px ,2% ,center );
+        color: $grey;
+    }
+
+    &__content {
+        @include flex-params(flex,center ,row ,none );
+        gap: 30px;
+    }
+
+    &__card {
+        @include size-of-object(350px,255px );
+        background-color: $full-white;
+        border-radius: 20px;
+        box-shadow: -1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+        transition: transform 1.5s, box-shadow 1s;
+        .choose__card-wrapper{
+            @include flex-params(flex,flex-end ,column ,none );
+            margin: 40px 37px 34px 37px;
+        }
+        &:hover{
+            transform: translateY(-15px);
+            box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+        }
+    }
+
+    &__icon {
+        @include size-of-object(60px,60px );
+        border-radius: 7px;
+        @include flex-params(flex,center ,none ,center );
+        margin-bottom: 22px;
+    }
+
+    &__icon_blue{
+        background-color: $num2-blue;
+    }
+
+    &__icon_orange{
+        background-color: $num3-orange;
+    }
+
+    &__icon_purple{
+        background-color: $num1-purple;
+    }    
+
+    &__card-title {
+        color: $black-text;
+        @include text-params(Open Sans,20px ,600 ,30px ,2% ,left );
+        margin-bottom: 15px;
+    }
+
+    &__card-info {
+        color: $grey;
+        @include text-params(Open Sans,14px ,400 ,22px ,2% ,left );
+    }
+}
+
 
