@@ -3,30 +3,30 @@
     background-color: $lightgreen;
     box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
     &__wrapper {
-        @include flex-params(flex,center,row,none);
+        @include flex-params(flex, center, row, none);
         max-width: 1440px;
         margin: 0 auto;
         background: $lightgreen;
     }
 
     &__logo {
-        @include flex-params(flex,none,row,center );
+        @include flex-params(flex, none, row, center);
         gap: 5px;
         margin-right: 56px;
     }
 
     &__title {
         color: $black-text;
-        @include text-params(Odibee Sans,29px ,400 ,32px ,5% ,left );
+        @include text-params(Odibee Sans, 29px, 400, 32px, 5%, left);
     }
 
     &__navbar {
-        @include flex-params(flex,none ,row, center);
+        @include flex-params(flex, none, row, center);
         gap: 30px;
         color: $dark-text;
         margin-right: 67px;
         a {
-            @include text-params(Open Sans,14px ,400 ,24px ,2% ,center );
+            @include text-params(Open Sans, 14px, 400, 24px, 2%, center);
             text-decoration: none;
             color: $dark-text;
             &:hover {
@@ -36,15 +36,15 @@
     }
 
     &__search {
-        @include flex-params(flex,none ,row ,center );
+        @include flex-params(flex, none, row, center);
         margin-right: 25px;
         input {
             border: none;
             border-radius: 50px;
             background: $full-white;
-            @include size-of-object(310px,35px );;
+            @include size-of-object(310px, 35px);
             color: $grey;
-            @include text-params(Open Sans,14px ,400 ,62px ,2% ,none );
+            @include text-params(Open Sans, 14px, 400, 62px, 2%, none);
             padding-left: 19px;
         }
     }
@@ -55,7 +55,7 @@
             top: 4px;
             bottom: 3px;
             right: 35px;
-            @include size-of-object(28px,28px );
+            @include size-of-object(28px, 28px);
             border-radius: 50%;
             background: $search-button-color;
             border: none;
@@ -64,7 +64,7 @@
     }
 
     &__login {
-        @include text-params(Open Sans,16px ,400 ,62px ,2% ,left );
+        @include text-params(Open Sans, 16px, 400, 62px, 2%, left);
         a {
             text-decoration: none;
             color: $dark-text;

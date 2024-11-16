@@ -1,16 +1,16 @@
-@mixin flex-params($d,$j,$fd,$al){
+@mixin flex-params($d, $j, $fd, $al) {
     display: $d;
     justify-content: $j;
     flex-direction: $fd;
     align-items: $al;
 }
 
-@mixin size-of-object($width,$height){
+@mixin size-of-object($width, $height) {
     width: $width;
     height: $height;
 }
 
-@mixin text-params($font_fam,$font_size,$font_w,$line_height,$letter_spacing,$text_a){
+@mixin text-params($font_fam, $font_size, $font_w, $line_height, $letter_spacing, $text_a) {
     font-family: $font_fam;
     font-size: $font_size;
     font-weight: $font_w;

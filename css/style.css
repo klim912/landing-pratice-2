@@ -55,7 +55,7 @@ blockquote, q {
 
 .header {
   display: flex;
-  background-color: #F5F7FF;
+  background-color: #f5f7ff;
   box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
 }
 .header__wrapper {
@@ -65,7 +65,7 @@ blockquote, q {
   align-items: none;
   max-width: 1440px;
   margin: 0 auto;
-  background: #F5F7FF;
+  background: #f5f7ff;
 }
 .header__logo {
   display: flex;
@@ -119,7 +119,7 @@ blockquote, q {
   background: #fff;
   width: 310px;
   height: 35px;
-  color: #A8A8A8;
+  color: #a8a8a8;
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
@@ -170,7 +170,7 @@ blockquote, q {
   justify-content: center;
   flex-direction: row;
   align-items: none;
-  background: #F5F7FF;
+  background: #f5f7ff;
 }
 .discover__sidebar {
   display: flex;
@@ -191,10 +191,10 @@ blockquote, q {
   margin-bottom: 18px;
 }
 .discover__title span {
-  color: #FF5C00;
+  color: #ff5c00;
 }
 .discover__subtitle {
-  color: #A8A8A8;
+  color: #a8a8a8;
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
@@ -238,7 +238,7 @@ blockquote, q {
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  background-color: #F5F7FF;
+  background-color: #f5f7ff;
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-family: Open Sans;
@@ -297,7 +297,7 @@ blockquote, q {
   line-height: 50px;
   letter-spacing: 5%;
   text-align: left;
-  color: #FF5C00;
+  color: #ff5c00;
   margin-bottom: 20px;
 }
 .find__sidebar {
@@ -323,7 +323,7 @@ blockquote, q {
   width: 435px;
   height: 60px;
   border-radius: 8px;
-  color: #F5F7FF;
+  color: #f5f7ff;
 }
 .find__card .find__justify {
   display: flex;
@@ -348,16 +348,16 @@ blockquote, q {
   text-align: none;
 }
 .find__card-number_first {
-  background-color: #F3E0FF;
-  color: #9444C9;
+  background-color: #f3e0ff;
+  color: #9444c9;
 }
 .find__card-number_second {
-  background-color: #E7E9FE;
-  color: #626FFF;
+  background-color: #e7e9fe;
+  color: #626fff;
 }
 .find__card-number_third {
-  background-color: #FFDECC;
-  color: #FF5C00;
+  background-color: #ffdecc;
+  color: #ff5c00;
 }
 .find__subtitle {
   font-family: Open Sans;
@@ -376,7 +376,7 @@ blockquote, q {
   width: 435px;
   height: 135px;
   border-radius: 8px;
-  color: #F5F7FF;
+  color: #f5f7ff;
 }
 .find__card-wrapper {
   display: flex;
@@ -397,7 +397,7 @@ blockquote, q {
   line-height: 22px;
   letter-spacing: 2%;
   text-align: none;
-  color: #A8A8A8;
+  color: #a8a8a8;
 }
 .find__video img {
   width: 635px;
@@ -451,7 +451,7 @@ blockquote, q {
   line-height: 24px;
   letter-spacing: 2%;
   text-align: center;
-  color: #A8A8A8;
+  color: #a8a8a8;
 }
 .choose__content {
   display: flex;
@@ -490,13 +490,13 @@ blockquote, q {
   margin-bottom: 22px;
 }
 .choose__icon_blue {
-  background-color: #626FFF;
+  background-color: #626fff;
 }
 .choose__icon_orange {
-  background-color: #FF5C00;
+  background-color: #ff5c00;
 }
 .choose__icon_purple {
-  background-color: #9444C9;
+  background-color: #9444c9;
 }
 .choose__card-title {
   color: #353434;
@@ -509,7 +509,7 @@ blockquote, q {
   margin-bottom: 15px;
 }
 .choose__card-info {
-  color: #A8A8A8;
+  color: #a8a8a8;
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
