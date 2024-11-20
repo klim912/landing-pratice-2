@@ -3,11 +3,13 @@
 @import "_variables";
 @import "_mixins";
 @import "_header";
+@import "_footer";
 
 .discover {
     @include flex-params(flex, center, none, none);
     box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
     margin-top: 0;
+
     &__wrapper {
         width: 1440px;
         @include flex-params(flex, center, row, none);
@@ -24,6 +26,7 @@
         @include text-params(Prompt, 45px, 400, 55px, 7%, left);
         color: $black-text;
         margin-bottom: 18px;
+
         span {
             color: $num3-orange;
         }
@@ -38,6 +41,7 @@
     &__buttons {
         @include flex-params(flex, none, row, none);
         gap: 35px;
+
         .discover__button-left {
             @include flex-params(flex, center, none, center);
             border-radius: 6px;
@@ -49,6 +53,7 @@
             @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
             cursor: pointer;
         }
+
         .discover__button-right {
             @include size-of-object(155px, 45px);
             @include flex-params(flex, none, row, center);
@@ -71,6 +76,7 @@
     @include flex-params(flex, center, none, none);
     margin-top: 35px;
     margin-bottom: 65px;
+
     &__wrapper {
         width: 1440px;
         @include flex-params(flex, center, none, none);
@@ -79,6 +85,7 @@
 
 .find {
     @include flex-params(flex, center, none, none);
+
     &__wrapper {
         width: 1440px;
         @include flex-params(flex, center, none, none);
@@ -97,6 +104,7 @@
 
     &__sidebar {
         @include flex-params(flex, none, column, none);
+
         .find__title {
             color: $black-text;
             @include text-params(Oswald, 40px, 400, 50px, 5%, left);
@@ -108,6 +116,7 @@
         @include size-of-object(435px, 60px);
         border-radius: 8px;
         color: $lightgreen;
+
         .find__justify {
             @include flex-params(flex, none, row, center);
         }
@@ -154,6 +163,7 @@
 
     &__card-wrapper {
         @include flex-params(flex, space-between, row, center);
+
         .find__justify {
             @include flex-params(flex, none, row, center);
         }
@@ -169,6 +179,7 @@
             @include size-of-object(635px, 435px);
             border-radius: 20px;
         }
+
         .find__player {
             position: relative;
             @include size-of-object(77px, 77px);
@@ -181,10 +192,12 @@
 
 .choose {
     @include flex-params(flex, center, none, none);
+
     &__wrapper {
         width: 1440px;
         margin: 0 auto;
         @include flex-params(flex, center, column, none);
+        margin-bottom: 120px;
     }
 
     &__header {
@@ -216,10 +229,12 @@
         transition:
             transform 1.5s,
             box-shadow 1s;
+
         .choose__card-wrapper {
             @include flex-params(flex, flex-end, column, none);
             margin: 40px 37px 34px 37px;
         }
+
         &:hover {
             transform: translateY(-15px);
             box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
@@ -254,5 +269,485 @@
     &__card-info {
         color: $grey;
         @include text-params(Open Sans, 14px, 400, 22px, 2%, left);
+    }
+}
+
+.jobs {
+    @include flex-params(flex, center, none, none);
+
+    &__wrapper {
+        @include flex-params(flex, center, column, none);
+        width: 1440px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__header {
+        @include flex-params(flex, center, column, none);
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        @include text-params(Oswald, 40px, 400, 50px, 5%, center);
+        color: $black-text;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include text-params(Open Sans, 14px, 400, 24px, 2%, center);
+        color: $grey;
+    }
+
+    &__content-wrapper {
+        @include flex-params(flex, center, row, none);
+        left: 170px;
+        position: relative;
+
+    }
+
+    &__navbar {
+        @include flex-params(flex, none, row, center);
+        gap: 20px;
+        margin-right: 50px;
+    }
+
+    &__arrow {
+        @include flex-params(flex, center, none, center);
+        @include size-of-object(60px, 60px);
+        border-radius: 7px;
+        cursor: pointer;
+
+        &_active {
+            background-color: $jobs-color-orange;
+        }
+
+        &_unactive {
+            background-color: $full-white;
+        }
+    }
+
+    &__content {
+        @include flex-params(flex, none, row, none);
+        gap: 65px;
+    }
+
+    &__card {
+        @include flex-params(flex, center, column, none);
+
+        &_active {
+            @include size-of-object(380px, 465px);
+            border-radius: 20px;
+            box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+            background: rgb(249, 250, 255);
+            position: relative;
+            bottom: 35px;
+        }
+
+        &_unactive {
+            @include size-of-object(380px, 465px);
+            border-radius: 20px;
+            box-shadow: -1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+            background: rgb(255, 255, 255);
+        }
+    }
+
+    &__card-more {
+        position: relative;
+        left: 320px;
+        cursor: pointer;
+    }
+
+    &__profile-image {
+        @include flex-params(flex, center, none, none);
+
+        img {
+            @include size-of-object(83px, 83px);
+        }
+    }
+
+    &__position {
+        @include text-params(Open Sans, 20px, 400, 50px, 2%, center);
+        margin-top: 40px;
+    }
+
+    &__team {
+        @include text-params(Open Sans, 14px, 400, 22px, 2%, center);
+        margin-top: 15px;
+        color: $blue;
+    }
+
+    &__salary-wrapper {
+        @include flex-params(flex, center, row, center);
+        gap: 10px;
+    }
+
+    &__salary-icon {
+        color: $full-black;
+    }
+
+    &__salary {
+        @include text-params(Open Sans, 14px, 400, 50px, 2%, none);
+
+        span {
+            color: $grey-for-jobs;
+        }
+    }
+
+    &__location-wrapper {
+        @include flex-params(flex, center, row, center);
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    &__location-icon {
+        color: $full-black;
+    }
+
+    &__location {
+        @include text-params(Open Sans, 14px, 400, 50px, 2%, none);
+
+        span {
+            color: $grey-for-jobs;
+        }
+    }
+
+    &__buttons {
+        @include flex-params(flex, center, row, center);
+        gap: 30px;
+    }
+
+    &__favorite-button-wrapper {
+        .jobs__favorite-button_active {
+            @include size-of-object(50px, 50px);
+            border: none;
+            border-radius: 50%;
+            background: $num3-orange;
+            cursor: pointer;
+        }
+
+        .jobs__favorite-button {
+            @include size-of-object(50px, 50px);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+
+        }
+    }
+
+    &__favorite-button {
+        @include flex-params(flex, center, none, center);
+        @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
+        color: $full-white;
+    }
+
+    &__apply-button-wrapper {
+        .jobs__apply-button_active {
+            @include size-of-object(150px, 50px);
+            border: none;
+            border-radius: 47px;
+            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+            background: $jobs-apply-button;
+            cursor: pointer;
+        }
+
+        .jobs__apply-button {
+            @include size-of-object(150px, 50px);
+            border: none;
+            border-radius: 47px;
+            background: $jobs-apply-button-unactive;
+            cursor: pointer;
+        }
+    }
+
+    &__apply-button_active {
+        @include flex-params(flex, center, none, center);
+        @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
+        color: $full-white;
+        cursor: pointer;
+    }
+
+    &__apply-button {
+        @include flex-params(flex, center, none, center);
+        @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
+        color: #38318B;
+        cursor: pointer;
+    }
+
+    &__view {
+        @include flex-params(flex, center, none, none);
+        margin-top: 75px;
+        margin-bottom: 120px;
+
+        .jobs__view-button {
+            @include flex-params(flex, center, none, center);
+            @include size-of-object(150px, 50px);
+            @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
+            color: $full-white;
+            border: none;
+            border-radius: 47px;
+            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+            background: rgb(84, 76, 172);
+            cursor: pointer;
+        }
+    }
+}
+
+.customer {
+    @include flex-params(flex, center, none, none);
+
+    &__wrapper {
+        @include flex-params(flex, center, column, none);
+        width: 1440px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+    }
+
+    &__header {
+        @include flex-params(flex, center, column, none);
+        gap: 20px;
+        margin-bottom: 45px;
+    }
+
+    &__title {
+        @include text-params(Oswald, 40px, 400, 50px, 5%, center);
+        color: $black-text;
+    }
+
+    &__subtitle {
+        @include text-params(Open Sans, 14px, 400, 24px, 2%, center);
+        color: $grey;
+    }
+
+
+    &__content-wrapper {
+        @include flex-params(flex, center, row, none);
+        gap: 30px;
+    }
+
+    &_img {
+        img {
+            @include size-of-object(350px, 350px);
+        }
+    }
+
+    &__content {
+        @include flex-params(flex, none, column, none);
+        @include size-of-object(730px, 280px);
+    }
+
+    &__content-title {
+        @include text-params(Open Sans, 20px, 600, 30px, 2%, none);
+        color: $black-text;
+    }
+
+    &__content-subtitle {
+        @include text-params(Open Sans, 14px, 400, 24px, 2%, none);
+        color: $dark-grey;
+        margin-bottom: 20px;
+    }
+
+    &__content-stars {
+        @include flex-params(flex, flex-end, row, center);
+        gap: 10px;
+        margin-bottom: 10px;
+
+        p {
+            @include text-params(Open Sans, 20px, 600, 30px, 2%, none);
+        }
+    }
+
+    &__content-text {
+        @include text-params(Open Sans, 14px, 400, 24px, 2%, none);
+        color: $black-text;
+        margin-bottom: 40px;
+    }
+
+    &__content-footer {
+        @include flex-params(flex, space-between, row, center);
+    }
+
+    &__button {
+        @include flex-params(flex, none, row, center);
+        gap: 15px;
+
+        &_active {
+            @include flex-params(flex, center, none, center);
+            @include size-of-object(41px, 41px);
+            border-radius: 7px;
+            background-color: $jobs-color-orange;
+            border: none;
+            cursor: pointer;
+
+            img {
+                @include size-of-object(21px, 18px);
+            }
+        }
+
+        &_unactive {
+            @include flex-params(flex, center, none, center);
+            @include size-of-object(41px, 41px);
+            border-radius: 7px;
+            background-color: $lightblue;
+            border: none;
+            cursor: pointer;
+
+            img {
+                @include size-of-object(21px, 18px);
+            }
+        }
+
+    }
+
+    &__icons {
+        img {
+            @include size-of-object(140px, 50px);
+        }
+    }
+}
+
+.statistic {
+    @include flex-params(flex, center, none, none);
+
+    &_wrapper {
+        @include flex-params(flex, center, column, none);
+        @include size-of-object(1110px, 230px);
+        margin: 0 auto;
+        background-color: $statistic-bgc;
+        border-radius: 30px;
+        margin-bottom: 120px;
+    }
+
+    &__content {
+        @include flex-params(flex, space-around, row, center);
+    }
+
+    &__item {
+        @include flex-params(flex, center, column, none);
+        gap: 15px;
+    }
+
+    &__item-header {
+        @include text-params(Oswald, 40px, 400, 50px, 5%, center);
+        color: $statistic-text;
+    }
+
+    &__item-footer {
+        @include text-params(Open Sans, 16px, 400, 24px, 2%, center);
+        color: $full-white;
+    }
+}
+
+.price {
+    @include flex-params(flex, center, none, none);
+
+    &__wrapper {
+        @include flex-params(flex, center, column, none);
+        width: 1440px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+    }
+
+    &__header {
+        @include flex-params(flex, center, column, none);
+        gap: 20px;
+        margin-bottom: 75px;
+    }
+
+    &__title {
+        @include text-params(Oswald, 40px, 400, 50px, 5%, center);
+        color: $black-text;
+    }
+
+    &__subtitle {
+        @include text-params(Open Sans, 14px, 400, 24px, 2%, center);
+        color: $grey;
+    }
+
+    &__content {
+        @include flex-params(flex, center, row, none);
+        gap: 30px;
+    }
+
+    &__card-wrapper {
+        @include size-of-object(350px, 540px);
+        background-color: $full-white;
+        border-radius: 20px;
+        box-shadow: -1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+        transition:
+            transform 1.5s,
+            box-shadow 1s;
+
+        &:hover {
+            color: $price-card-hover-color;
+            transform: translateY(-30px);
+            box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+
+            .price__button {
+                button {
+
+                    background-color: $jobs-apply-button;
+                    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+
+    &__card {
+        @include flex-params(flex, center, column, none);
+        margin: 62px 65px;
+    }
+
+    &__card-title {
+        @include text-params(Open Sans, 20px, 600, 30px, 2%, center);
+        color: $blue;
+        margin-bottom: 30px;
+    }
+
+    &__card-subtitle {
+        @include flex-params(flex, center, column, none);
+        gap: 25px;
+        margin-bottom: 70px;
+    }
+
+    &__card-price {
+        @include text-params(Oswald, 45px, 400, 55px, 7%, center);
+        color: $black-text;
+    }
+
+    &__card-term {
+        @include text-params(Open Sans, 16px, 400, 24px, 2%, center);
+        color: $price-text-color;
+    }
+
+    &__include {
+        @include flex-params(flex, center, column, none);
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    &__info {
+        @include flex-params(flex, none, row, center);
+        gap: 12px;
+
+        p {
+            @include text-params(Open Sans, 14px, 400, 24px, 2%, center);
+            color: $grey;
+        }
+    }
+
+    &__button {
+        @include flex-params(flex, center, none, none);
+
+        button {
+            transition: 1.5s;
+            @include flex-params(flex, center, none, center);
+            @include size-of-object(170px, 45px);
+            @include text-params(Open Sans, 16px, 400, 62px, 2%, none);
+            color: $full-white;
+            border: none;
+            border-radius: 50px;
+            background-color: $price-button-color;
+            cursor: pointer;
+        }
     }
 }

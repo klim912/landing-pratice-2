@@ -1,0 +1,106 @@
+.footer {
+    display: flex;
+    background-color: $footer-bgc;
+
+    &__wrapper {
+        @include flex-params(flex, center, column, none);
+        @include size-of-object(1440px, 425px);
+        margin: 0 auto;
+        background: $footer-bgc;
+        border-radius: 30px 30px 0px 0px;
+        background: $footer-bgc;
+    }
+
+    &__header-wrapper {
+        @include size-of-object(1085px, 165px);
+        padding: 110px 190px 100px 165px;
+    }
+
+    &__header {
+        @include flex-params(flex, space-around, row, center);
+        margin-bottom: 100px;
+    }
+
+    &__row {
+        @include flex-params(flex, center, column, none);
+        gap: 30px;
+    }
+
+    &__row-title {
+        @include text-params(Oswald, 24px, 400, 26px, none, left);
+        color: $black-text;
+    }
+
+    &__row-links {
+        @include flex-params(flex, center, column, none);
+        gap: 20px;
+
+        a {
+            @include text-params(Open Sans, 16px, 400, 26px, 2%, left);
+            text-decoration: none;
+            color: $footer-grey;
+
+        }
+    }
+
+    &__content {
+        @include flex-params(flex, center, column, none);
+    }
+
+    &__line {
+        align-self: center;
+        width: 1110px;
+        border: 2px solid rgb(98, 91, 174);
+    }
+
+    &__info {
+        width: 1110px;
+        @include flex-params(flex, space-between, row, center);
+        align-self: center;
+        margin-top: 20px;
+
+        padding-bottom: 20px;
+    }
+
+    &__logo {
+        @include flex-params(flex, none, row, center);
+        gap: 7px;
+    }
+
+    &__image img {
+        @include size-of-object(26px, 25px);
+    }
+
+    &__links {
+        @include flex-params(flex, center, row, center);
+        gap: 65px;
+
+        a {
+            text-decoration: none;
+            @include text-params(Open Sans, 14px, 600, 26px, 2%, none);
+            color: $footer-blue;
+        }
+    }
+
+    &__social {
+        @include flex-params(flex, none, row, center);
+        gap: 10px;
+
+        &-icon {
+            @include flex-params(flex, center, none, center);
+            @include size-of-object(30px, 30px);
+            border-radius: 50%;
+            background-color: $full-white;
+            cursor: pointer;
+
+            img {
+                @include size-of-object(15px, 12px);
+            }
+
+            &_active {
+                background-color: $blue;
+            }
+        }
+    }
+
+}
