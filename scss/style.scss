@@ -751,3 +751,222 @@
         }
     }
 }
+
+
+@media (max-width:$breakpoint) {
+    header {
+        display: none;
+    }
+
+    .discover {
+        max-width: $breakpoint;
+
+        &__wrapper {
+            max-width: 380px;
+            @include flex-params(flex, center, column, none);
+        }
+
+        &__sidebar {
+            width: auto;
+            margin-top: 75px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__subtitle {
+            text-align: justify;
+        }
+
+        &__buttons {
+            justify-content: center;
+            gap: 15px;
+
+            .discover__button-right {
+                width: auto;
+            }
+        }
+
+        &__img img {
+            @include size-of-object(380px, 300px);
+        }
+    }
+
+    .roulette {
+        &__wrapper img {
+            width: 380px;
+        }
+    }
+
+    .find {
+        max-width: $breakpoint;
+
+        &__wrapper {
+            max-width: 380px;
+            @include flex-params(flex, center, column, none);
+        }
+
+        &__content-wrapper {
+            justify-content: center;
+            margin-right: 0px;
+        }
+
+        &__card {
+            max-width: 380px;
+        }
+
+        &__card-active {
+            max-width: 380px;
+        }
+
+        &__video {
+            margin-top: 10px;
+
+            img {
+                max-width: 380px;
+                max-height: 200px;
+            }
+
+            &__player {
+                top: -100px;
+                left: -200px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .choose {
+        &__wrapper {
+            max-width: 380px;
+        }
+
+        &__content {
+            @include flex-params(flex, center, column, center);
+        }
+    }
+
+    .jobs {
+        &__wrapper {
+            max-width: 380px;
+        }
+
+        &__content-wrapper {
+            @include flex-params(flex, center, column, center);
+            left: 0px;
+        }
+
+        &__navbar {
+            margin-right: 0px;
+        }
+
+        &__card_active {
+            display: none;
+        }
+
+        &__content {
+            @include flex-params(flex, none, column, none);
+            gap: 65px;
+        }
+
+    }
+
+    // todo: adapt
+    .customer {
+        &__wrapper {
+            max-width: 380px;
+        }
+
+        &__content-wrapper {
+            flex-direction: column;
+        }
+
+        &_img {
+            @include flex-params(flex, center, none, none);
+        }
+
+        &__content {
+            @include flex-params(flex, center, column, none);
+            @include size-of-object(380px, 400px);
+        }
+
+        &__content-title {
+            text-align: center;
+        }
+
+        &__content-subtitle {
+            text-align: center;
+        }
+
+        &__content-stars {
+            justify-content: center;
+        }
+
+        &__content-text {
+            text-align: justify;
+        }
+    }
+
+    .statistic {
+        &_wrapper {
+            @include flex-params(flex, center, column, none);
+            @include size-of-object(380px, 550px);
+
+        }
+
+        &__content {
+            @include flex-params(flex, none, column, center);
+            gap: 30px;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            max-width: 380px
+        }
+
+        .price__content {
+            @include flex-params(flex, center, column, none);
+            margin: 0 auto;
+        }
+    }
+
+    footer {
+        .footer__wrapper {
+            @include size-of-object(auto, 500px);
+        }
+
+        .footer__row-links {
+            display: none;
+        }
+
+        .footer__header-wrapper {
+            @include size-of-object(auto, auto);
+            @include flex-params(flex, center, none, center);
+            padding: 0;
+        }
+
+        .footer__header {
+            @include flex-params(flex, center, column, none);
+            margin-bottom: 50px;
+            gap: 25px;
+        }
+
+        .footer__content {
+            width: auto;
+        }
+
+        .footer__line {
+            width: 100%;
+        }
+
+        .footer__info {
+            width: 90%;
+        }
+
+        .footer__links {
+            display: none;
+        }
+    }
+
+}

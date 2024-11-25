@@ -1306,3 +1306,200 @@ blockquote, q {
   background-color: #BDBBD9;
   cursor: pointer;
 }
+
+@media (max-width: 430px) {
+  header {
+    display: none;
+  }
+  .discover {
+    max-width: 430px;
+  }
+  .discover__wrapper {
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+  }
+  .discover__sidebar {
+    width: auto;
+    margin-top: 75px;
+  }
+  .discover__title {
+    text-align: center;
+  }
+  .discover__subtitle {
+    text-align: justify;
+  }
+  .discover__buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+  .discover__buttons .discover__button-right {
+    width: auto;
+  }
+  .discover__img img {
+    width: 380px;
+    height: 300px;
+  }
+  .roulette__wrapper img {
+    width: 380px;
+  }
+  .find {
+    max-width: 430px;
+  }
+  .find__wrapper {
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+  }
+  .find__content-wrapper {
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .find__card {
+    max-width: 380px;
+  }
+  .find__card-active {
+    max-width: 380px;
+  }
+  .find__video {
+    margin-top: 10px;
+  }
+  .find__video img {
+    max-width: 380px;
+    max-height: 200px;
+  }
+  .find__video__player {
+    top: -100px;
+    left: -200px;
+    cursor: pointer;
+  }
+  .choose__wrapper {
+    max-width: 380px;
+  }
+  .choose__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .jobs__wrapper {
+    max-width: 380px;
+  }
+  .jobs__content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    left: 0px;
+  }
+  .jobs__navbar {
+    margin-right: 0px;
+  }
+  .jobs__card_active {
+    display: none;
+  }
+  .jobs__content {
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    align-items: none;
+    gap: 65px;
+  }
+  .customer__wrapper {
+    max-width: 380px;
+  }
+  .customer__content-wrapper {
+    flex-direction: column;
+  }
+  .customer_img {
+    display: flex;
+    justify-content: center;
+    flex-direction: none;
+    align-items: none;
+  }
+  .customer__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+    width: 380px;
+    height: 400px;
+  }
+  .customer__content-title {
+    text-align: center;
+  }
+  .customer__content-subtitle {
+    text-align: center;
+  }
+  .customer__content-stars {
+    justify-content: center;
+  }
+  .customer__content-text {
+    text-align: justify;
+  }
+  .statistic_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+    width: 380px;
+    height: 550px;
+  }
+  .statistic__content {
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .price__wrapper {
+    max-width: 380px;
+  }
+  .price .price__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+    margin: 0 auto;
+  }
+  footer .footer__wrapper {
+    width: auto;
+    height: 500px;
+  }
+  footer .footer__row-links {
+    display: none;
+  }
+  footer .footer__header-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: none;
+    align-items: center;
+    padding: 0;
+  }
+  footer .footer__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: none;
+    margin-bottom: 50px;
+    gap: 25px;
+  }
+  footer .footer__content {
+    width: auto;
+  }
+  footer .footer__line {
+    width: 100%;
+  }
+  footer .footer__info {
+    width: 90%;
+  }
+  footer .footer__links {
+    display: none;
+  }
+}
