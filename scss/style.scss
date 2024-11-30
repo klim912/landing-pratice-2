@@ -130,17 +130,17 @@
         @include text-params(Open Sans, 16px, 600 bold, none, none, none);
 
         &_first {
-            background-color: $bgc1;
+            background-color: $bg-gray-100;
             color: $num1-purple;
         }
 
         &_second {
-            background-color: $bgc2;
+            background-color: $bg-gray-200;
             color: $num2-blue;
         }
 
         &_third {
-            background-color: $bgc3;
+            background-color: $bg-gray-300;
             color: $num3-orange;
         }
     }
@@ -755,7 +755,38 @@
 
 @media (max-width:$breakpoint) {
     header {
-        display: none;
+        .header__navbar{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: $lightgreen;
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+            a{
+                font-size: 18px;
+            }
+        }
+        .header__navbar.active {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            height: 30vh;
+          }
+          .header__burger {
+            display: flex;
+          }
+        .header__wrapper{
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .header__search{
+            display: none;
+        }
     }
 
     .discover {
